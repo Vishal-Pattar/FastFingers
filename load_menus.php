@@ -29,7 +29,7 @@ if($menu==1)
 
 else if($menu==2)
 {
-    $query = "select * from ranking NATURAL JOIN users WHERE user_name='" . $_SESSION['user_name'] . "' ORDER BY user_id DESC";
+    $query = "select * from ranking NATURAL JOIN users WHERE user_name='" . $_SESSION['user_name'] . "' ORDER BY id DESC";
     $result = $db->run_query($query);
 
     while($row = mysqli_fetch_array($result))
@@ -40,7 +40,7 @@ else if($menu==2)
 
 else if($menu==3)
 {
-    $query = "select * from ranking NATURAL JOIN users ORDER BY user_id DESC";
+    $query = "select * from ranking NATURAL JOIN users ORDER BY id DESC";
     $result = $db->run_query($query);
 
     while($row = mysqli_fetch_array($result))
